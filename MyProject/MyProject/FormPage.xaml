@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyProject.FormPage"
+             Title="Thêm nhân viên">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Tên nhân viên" />
+            <Entry x:Name="Name" Placeholder="Nhập tên nhân viên" />
+
+            <Label Text="Vai trò" />
+            <Entry x:Name="Role" Placeholder="Nhập vai trò" />
+
+            <Label Text="Phòng ban" />
+            <Picker x:Name="DepartmentPicker"
+                    Title="Chọn phòng ban"
+                    ItemDisplayBinding="{Binding Name}"/>
+
+           <Button Text="Lưu" Clicked="OnSaveClicked" />
+       
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
