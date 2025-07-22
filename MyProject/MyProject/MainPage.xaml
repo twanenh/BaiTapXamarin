@@ -24,6 +24,9 @@
                                 <Label Text="{Binding Role}"
                                    FontSize="Small"
                                    TextColor="Gray" />
+                                <Label Text="{Binding DepartmentName, StringFormat='Phòng ban: {0}'}"
+                                   FontSize="Small"
+                                   TextColor="Gray" />
                             </StackLayout>
 
                             <Button Text="Sửa"

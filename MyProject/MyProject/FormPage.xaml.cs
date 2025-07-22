@@ -68,7 +68,7 @@ namespace MyProject
 
                 if (_editingEmployee == null)
                 {
-                    var newEmployee = new Employee
+                    var newEmployee = new EmployeeDTO
                     {
                         Name = name,
                         Role = role,

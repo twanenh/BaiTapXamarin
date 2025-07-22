@@ -12,8 +12,8 @@ namespace MyProject.Services
     public class EmployeeService
     {
         private readonly HttpClient _httpClient = new HttpClient();
-        //private string _apiUrl = "http://10.0.2.2:5172/api/Employee/";
-        private string _apiUrl = "http://192.168.100.34:5172/api/Employee/";
+        private string _apiUrl = "http://10.0.2.2:5172/api/Employee/";
+        //private string _apiUrl = "http://192.168.100.34:5172/api/Employee/";
 
         public async Task<List<EmployeeDTO>> GetAllAsync()
         {
@@ -21,7 +21,7 @@ namespace MyProject.Services
             return JsonConvert.DeserializeObject<List<EmployeeDTO>>(response);
         }
 
-        public async Task<bool> CreateAsync(Employee nv)
+        public async Task<bool> CreateAsync(EmployeeDTO nv)
         {
             var json = JsonConvert.SerializeObject(nv);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
